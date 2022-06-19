@@ -23,17 +23,17 @@ public class WeaponControl : MonoBehaviour
     private void Update()
     {
         //Look
-        
+
         Debug.DrawRay(firePoint.transform.position, firePoint.transform.TransformDirection(Vector3.forward) * 30, Color.green);
 
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, obstacleLayer))
         {
             hand.transform.LookAt(hit.point);
             hand.transform.rotation *= Quaternion.Euler(offset);
-        
+
         }
 
-       
+
         //Cooldown
         if (cooldown > 0)
         {
