@@ -17,8 +17,7 @@ public class Drone : MonoBehaviour
     private void FollowPlayer()
     {
         //Look to Player
-        transform.LookAt(player.position);
-        transform.rotation *= Quaternion.Euler(new Vector3(0,180,0));
+        transform.LookAt(new Vector3(player.position.x, transform.position.y, player.position.z));
 
         //Move to Player
         if(Vector3.Distance(transform.position, player.position) >= followDistance)
@@ -26,7 +25,11 @@ public class Drone : MonoBehaviour
             transform.Translate(transform.forward * Time.deltaTime * speed);
 
         }
+        else
+        {
+            transform.RotateAround(player.position, transform.forward, Time.deltaTime * speed);
 
+        }
 
     }
 
