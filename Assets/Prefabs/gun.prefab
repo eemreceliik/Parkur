@@ -95,12 +95,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6d9d292c7af87c4c910090b3207ed0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hand: {fileID: 0}
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 256
   offset: {x: 4, y: -86, z: 2}
   bullet: {fileID: 1957432028914485426, guid: bb3acb4c80608fb4db9df942a6f348dd, type: 3}
   firePoint: {fileID: 672428591898660823}
+  gunShot: {fileID: 0}
 --- !u!1 &7853251164243450425
 GameObject:
   m_ObjectHideFlags: 0

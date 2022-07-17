@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 6738706889069239633}
   - component: {fileID: 6241934784740187860}
   - component: {fileID: 7744743931796773433}
+  - component: {fileID: 7656991467747082533}
+  - component: {fileID: 6111245565810977576}
   m_Layer: 0
   m_Name: EnemyBullet
   m_TagString: Untagged
@@ -204,3 +206,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 60
   lifetime: 4
+  enemyBullet: 1
+  bulletRadius: 0.5
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  hitEffect: {fileID: 4177614003493678939, guid: 9da35a57f4e3bd94da78c46093889c2c, type: 3}
+  hitSound: {fileID: 8300000, guid: 70873ef9e5c0c654898b59d1327f93d2, type: 3}
+--- !u!65 &7656991467747082533
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7008391906338864144}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.99802667, y: 0.9960574, z: 2.2873795}
+  m_Center: {x: -0.000000059604645, y: 0.0019713044, z: 0.14381662}
+--- !u!54 &6111245565810977576
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7008391906338864144}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

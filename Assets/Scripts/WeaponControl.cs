@@ -51,7 +51,7 @@ public class WeaponControl : MonoBehaviour
             cooldown = 0.25f;
 
             //Sound
-            GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().PlayOneShot(gunShot);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().PlayOneShot(gunShot,0.5f);
 
             //Animation
             GetComponent<Animator>().SetTrigger("ShotTrigger");
